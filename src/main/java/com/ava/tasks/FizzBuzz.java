@@ -5,7 +5,7 @@ package com.ava.tasks;
  */
 public class FizzBuzz {
 
-    public static void execute(int i) {
+    public static void run(int i) {
         if (i == 0) return;
         if (i % 15 == 0) {
             System.out.printf("i:%d - FizzBuzz%n", i);
