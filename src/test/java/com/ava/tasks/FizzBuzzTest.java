@@ -24,28 +24,37 @@ class FizzBuzzTest {
 
     @Test
     public void testMultiplesOfThree() {
+        //arrange
+        final String expected = "i:3 - Fizz\r\ni:6 - Fizz\r\ni:9 - Fizz";
+        //act
         FizzBuzz.execute(3);
         FizzBuzz.execute(6);
         FizzBuzz.execute(9);
-        final String expected = "i:3 - Fizz\r\ni:6 - Fizz\r\ni:9 - Fizz";
+        //assert
         Assertions.assertEquals(expected, outputStreamCaptor.toString()
                 .trim());
     }
     @Test
     public void testMultiplesOfFive() {
+        //arrange
+        final String expected = "i:5 - Buzz\r\ni:10 - Buzz\r\ni:20 - Buzz";
+        //act
         FizzBuzz.execute(5);
         FizzBuzz.execute(10);
         FizzBuzz.execute(20);
-        final String expected = "i:5 - Buzz\r\ni:10 - Buzz\r\ni:20 - Buzz";
+        //assert
         Assertions.assertEquals(expected, outputStreamCaptor.toString()
                 .trim());
     }
     @Test
     public void testMultiplesOfFiveAndThree() {
+        //arrange
+        final String expected = "i:15 - FizzBuzz\r\ni:30 - FizzBuzz\r\ni:60 - FizzBuzz";
+        //act
         FizzBuzz.execute(15);
         FizzBuzz.execute(30);
         FizzBuzz.execute(60);
-        final String expected = "i:15 - FizzBuzz\r\ni:30 - FizzBuzz\r\ni:60 - FizzBuzz";
+        //assert
         Assertions.assertEquals(expected, outputStreamCaptor.toString()
                 .trim());
     }
