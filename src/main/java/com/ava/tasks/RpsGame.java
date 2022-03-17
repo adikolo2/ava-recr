@@ -7,6 +7,7 @@ import java.util.Scanner;
 /**
  * Implementation of the Rock-Paper-Scissors game
  */
+
 public class RpsGame {
 
     private static final String INTRO = """
@@ -21,15 +22,17 @@ public class RpsGame {
     private final static int win = 1;
     private final static int defeat = -1;
     private final static int truce = 0;
-    private final Scanner scan = new Scanner(System.in);
+    private final Scanner scan;
+
+    public RpsGame(Scanner scan) {
+        this.scan = scan;
+    }
 
     public void play() {
 
         System.out.println(INTRO);
         System.out.println("Choose the first shape");
         final RPS shapeOne = validateAndSet(scan, scan.nextLine());
-
-
         System.out.println("Choose the second shape");
         final RPS shapeTwo = validateAndSet(scan, scan.nextLine());
 
@@ -105,7 +108,5 @@ public class RpsGame {
                 case SCISSORS -> truce;
             };
         }
-
-
     }
 }
